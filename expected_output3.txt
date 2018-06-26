@@ -1,0 +1,25 @@
+Number of chars (n): Alphabets: Number of alphabets in the permutations (r): Permutations of abcd taking 4 alphabets at a time.
+abcd
+abdc
+acbd
+acdb
+adbc
+adcb
+bacd
+badc
+bcad
+bcda
+bdac
+bdca
+cabd
+cadb
+cbad
+cbda
+cdab
+cdba
+dabc
+dacb
+dbac
+dbca
+dcab
+dcba
