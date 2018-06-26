@@ -3,26 +3,18 @@
 
 using namespace std;
 
-
-// p = string to permute
-// n = number of chars
-// r = permutation size
-// result = final result
-// pos = index position for result (might not be necessary)
-
-void permute(char p[], int n, int r, char result[], int pos) {
-  if (n == 0) {
-    cout << "result: " << result << endl;
+void permute(char p[], int n, int r, int pos) {
+  if (pos == r) {
+    for (int i=0; i < r; i++) {
+      cout << p[i];
+    }
+    cout << endl;
     pos = 0;
     return;
   }
-  for (int i=0; i < n; i++) {
-    char pNew[n];
-    strncpy(pNew, p, n);
-    result[pos] = pNew[pos];
-    pNew[0] = pNew[1];
-    pNew[n] = '\0';
-    permute(pNew, n-1, r-1, result, pos+1);
+  for (int i=pos; i < n; i++) {
+    swap(p[pos], p[i]);
+    permute(p, n, r, pos+1);
   }
 }
 
@@ -31,11 +23,9 @@ int main()
   cout << "Number of chars (n): ";
   unsigned int n;
   cin >> n;
-  cout << n << endl;
   char* alphabets = new char [n+1];
   cout << "Alphabets: ";
   cin >> alphabets;
-  cout << alphabets << endl;
   cout << "Number of alphabets in the permutations (r): ";
   unsigned int r;
   cin >> r;
@@ -52,7 +42,7 @@ int main()
 	<< endl;
   char result[3];
   // Print the permutations of n alphabets taken r at a time
-  permute(alphabets, n, r, result, 0);
+  permute(alphabets, n, r, 0);
   delete[] alphabets;
   return 0;
 }

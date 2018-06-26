@@ -16,7 +16,6 @@ Input is string of chars, let's say `'abc'`
 5. when result is complete, push it into the array
 6. 
 
-
 example: 
 p = 'abc'
 n = 3
@@ -38,5 +37,3 @@ void permute(p, n, r, result, pos, arr) {
 		permute(p, n--, r--, result, pos++, arr);
 	}
 }
-
-
