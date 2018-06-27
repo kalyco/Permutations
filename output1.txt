@@ -1,10 +1,8 @@
-Number of chars (n): 3
-Alphabets: abc
-Number of alphabets in the permutations (r): 2
+Number of chars (n): Alphabets: Number of alphabets in the permutations (r): 2
 Permutations of abc taking 2 alphabets at a time.
 ab
 ac
-ca
+ba
+bc
 cb
-ab
-ac
+ca

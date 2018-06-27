@@ -15,6 +15,8 @@ void permute(char p[], int n, int r, int pos) {
   for (int i=pos; i < n; i++) {
     swap(p[pos], p[i]);
     permute(p, n, r, pos+1);
+    // reverse back after
+    swap(p[pos], p[i]);
   }
 }
 
